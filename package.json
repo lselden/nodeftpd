@@ -1,14 +1,27 @@
 {
+  "author": {
+    "name": "Luke Selden",
+    "email": "lselden@gmail.com",
+    "url": "http://lukeselden.com"
+  },
   "name": "ftpd",
-  "version": "0.0.1",
+  "description": "Node FTP server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/lselden/nodeftpd",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lselden/nodeftpd.git"
+  },
+  "main": "lib/ftpd.js",
+  "engines": {
+    "node": ">= 0.6"
+  },
   "dependencies": {},
   "devDependencies": {
-    "async": "~0.1.15",
-    "mocha": "~0.12.1",
-    "should": "~0.5.1",
-    "jsftp": "*"
+		"jsftp": "*"
+	},
+  "scripts": {
+    "test": "node test"
   },
-  "scripts": { 
-    "test" : "mocha specs/* --globals commandArg" 
-  } 
+  "readmeFilename": "README.md"
 }
