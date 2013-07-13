@@ -28,18 +28,18 @@ robot.testFilename = "hello.txt";
 
 
 var cfg = {
-	debugging: 10,
-	root: './data',
-	port: 21,
-	host: '127.0.0.1',
-	onReady: function() {
-		robot.next("beginning tests");
-	},
-	onError: function(e) {
-		console.error("unable to start server");
-		robot.die(e);
-	}
-};
+		debugging: 10,
+		root: './incoming',
+		port: 21,
+		host: '127.0.0.1',
+		onReady: function() {
+			robot.next("beginning tests");
+		},
+		onError: function(e) {
+			console.error("unable to start server");
+			robot.die(e);
+		}
+	};
 
 var testServer = new TestServer(cfg);
 
