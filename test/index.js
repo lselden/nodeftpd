@@ -1,8 +1,8 @@
-var util = require('util'),
-		TestServer = require('./server'),
-		JsFtp = require('jsftp'),
-		fs = require('fs'),
-		EventEmitter = require('events').EventEmitter;
+var util = require('util')
+  , TestServer = require('../server')
+  , JsFtp = require('jsftp')
+  , fs = require('fs')
+  , EventEmitter = require('events').EventEmitter;
 
 // robot is running the tests
 var robot = new EventEmitter();
@@ -39,9 +39,8 @@ var cfg = {
 			console.error("unable to start server");
 			robot.die(e);
 		}
-	};
-
-var testServer = new TestServer(cfg);
+	}
+  , testServer = new TestServer(cfg);
 
 robot.queue = [
 	function() {
